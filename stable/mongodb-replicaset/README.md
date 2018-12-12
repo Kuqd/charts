@@ -37,7 +37,6 @@ The following table lists the configurable parameters of the mongodb chart and t
 | `replicaSetName`                    | The name of the replica set                                               | `rs0`                                               |
 | `podDisruptionBudget`               | Pod disruption budget                                                     | `{}`                                                |
 | `port`                              | MongoDB port                                                              | `27017`                                             |
-| `imagePullSecrets`                  | Image pull secrets                                                        | `[]`                                                  |
 | `installImage.repository`           | Image name for the install container                                      | `unguiculus/mongodb-install`                        |
 | `installImage.tag`                  | Image tag for the install container                                       | `0.7`                                               |
 | `installImage.pullPolicy`           | Image pull policy for the init container that establishes the replica set | `IfNotPresent`                                      |
@@ -46,6 +45,7 @@ The following table lists the configurable parameters of the mongodb chart and t
 | `copyConfigImage.pullPolicy`        | Image pull policy for the copy config init container                      | `IfNotPresent`                                            |
 | `image.repository`                  | MongoDB image name                                                        | `mongo`                                             |
 | `image.tag`                         | MongoDB image tag                                                         | `3.6`                                               |
+| `image.imagePullSecrets`                  | Image pull secrets                                                        | `[]`                                                  |
 | `image.pullPolicy`                  | MongoDB image pull policy                                                 | `IfNotPresent`                                      |
 | `podAnnotations`                    | Annotations to be added to MongoDB pods                                   | `{}`                                                |
 | `securityContext`                   | Security context for the pod                                              | `{runAsUser: 999, fsGroup: 999, runAsNonRoot: true}`|
